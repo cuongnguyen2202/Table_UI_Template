@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fbfbfd;
+  padding: 5rem;
+  min-height: 100vh;
+}
+
+textarea,
+input,
+button,
+select {
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  font-weight: normal;
+}
+
+table {
+  width: 100%;
+}
+table th {
+  color: #867e7e;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 2rem;
+}
+table td,
+table th {
+  color: #867e7e;
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.4rem;
+}
+table thead tr {
+  border-bottom: 1px solid #ccc;
+}
+.status {
+  display: inline-block;
+  padding: 1rem 4rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 2rem;
+}
+.status--active {
+  color: green;
+  background-color: rgba(0, 128, 0, 0.3);
+}
+
+.desc {
+  white-space: nowrap;
+  max-width: 30rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.icon--action {
+  cursor: pointer;
+  margin: 0 5px;
+  font-size: 1.6rem;
+}
+
+.toogle__input {
+  display: none;
+}
+.toogle__input:checked + .toogle__label {
+  background-color: #7fb0ff;
+}
+.toogle__input:checked + .toogle__label::before {
+  background-color: #7fb0ff;
+  transform: translate(3rem, -50%);
+}
+.toogle__label {
+  width: 5rem;
+  height: 5px;
+  display: inline-block;
+  background-color: #9c9595;
+  border-radius: 1rem;
+  position: relative;
+  transition: 0.25s linear;
+  cursor: pointer;
+}
+.toogle__label::before {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  background-color: #9c9595;
+  border-radius: 3rem;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.25s linear;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #fbfbfd;
+    padding: 5rem;
+    min-height: 100vh;
+}
+
+textarea,
+input,
+button,
+select {
+    font-family: "Poppins", sans-serif;
+    outline: none;
+    font-weight: normal;
+}
+
+table {
+    width: 100%;
+    th {
+        color: #867e7e;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 1.4rem;
+        font-weight: 600;
+        padding: 2rem;
+    }
+    td,
+    th {
+        color: #867e7e;
+        text-align: center;
+        padding: 2rem;
+        font-size: 1.4rem;
+    }
+    thead {
+        tr {
+            border-bottom: 1px solid #ccc;
+        }
+    }
+    tbody {
+        tr {}
+    }
+}
+
+.status {
+    display: inline-block;
+    padding: 1rem 4rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 2rem;
+    &--active {
+        color: green;
+        background-color: rgba(green, 0.3);
+    }
+}
+
+.desc {
+    white-space: nowrap;
+    max-width: 30rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.icon--action {
+    cursor: pointer;
+    margin: 0 5px;
+    font-size: 1.6rem;
+}
+
+.toogle {
+    &__input {
+        display: none;
+        &:checked+.toogle__label {
+            background-color: rgb(127, 176, 255);
+            &::before {
+                background-color: rgb(127, 176, 255);
+                transform: translate(3rem, -50%);
+            }
+        }
+    }
+    &__label {
+        width: 5rem;
+        height: 5px;
+        display: inline-block;
+        background-color: #9c9595;
+        border-radius: 1rem;
+        position: relative;
+        transition: 0.25s linear;
+        cursor: pointer;
+        &::before {
+            content: "";
+            width: 2rem;
+            height: 2rem;
+            background-color: #9c9595;
+            border-radius: 3rem;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: 0.25s linear;
+        }
+    }
+}
